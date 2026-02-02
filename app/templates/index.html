@@ -1,0 +1,181 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academia de informática más grande de Venezuela, formamos programadores en Python, Java, JavaScript y lenguajes web">
+    <script src="https://kit.fontawesome.com/daf8c554e7.js" crossorigin="anonymous"></script>
+    <title>DEMON SLAYER API</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="nav">
+            <div class="sublogo">
+                <p class="titulo-p">DEMON SLAYER API</>
+                <img src="{% static 'img/Demon-Slayer-Logo.png' %}" alt="" class="sublogo-img">
+            </div>
+
+            <div class="nav-links">
+                <a href="#Documentacion" class="nav-font">Documentacion</a>
+
+                <a href="#example" class="nav-font">Ejemplo</a>
+
+                <a href="#colaboradores" class="nav-font">Colaboradores</a>
+
+
+                <div class="GitHub">
+                    <div class="circle_button">
+                        <a href="" class="nav-font"><button><i class="fa-brands fa-github"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <section class="fondo">
+            <div class="logo">
+                <h1 class="titulo">DEMON SLAYER API</h1>
+                    
+                <img src="{% static 'img/Demon-Slayer-Logo.png' %}" alt="" class="logo-img">
+                <!--  -->
+            </div>
+
+            <div class="introduccion">
+                <p>La API RESTful del increible universo del manga y anime de Kimetsu No Yaiba. Accede a datos de personajes, temporadas, arcos del mundo de Demon Slayer.</p>
+            <div>
+
+            
+        </section>
+
+    <main>
+        <section class="introcciones">
+            <div class="info">
+                <h2>Descripcion de la API RESTful</h2>
+                <p>Guía de referencia completa para la API de Kimetsu No Yaiba. Accede a personajes, arcos argumentales, episodios del anime e imágenes con puntos de conexión REST sencillos.</p>
+            </div>
+
+            <div class="grid">
+                <!-- Articulo 1 -->
+                <article class="article-grid">
+                    <div class="divtitle-article">
+                        <div class="icono">
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <div class="subtitle-article">
+                            <h3>Personajes</h3>
+                        </div>
+                        <div class="p-article">
+                            <p>Mas de 200 personajes a traves del manga y anime.</p>
+                        </div>
+                    </div>
+
+                    <div class="divsubtitle-article">
+                        <p>Obtenga información detallada sobre cada personaje, incluida su edad, ocupación, frases e imágenes de retratos.</p>
+                    </div>
+                </article>
+
+                <!-- Articulo 2 -->
+                <article class="article-grid">
+                    <div class="divtitle-article">
+                        <div class="icono">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                        <div class="subtitle-article">
+                            <h3>Arcos argumentales</h3>
+                        </div>
+                        <div class="p-article">
+                            <p>El manga de Demon Slayer está compuesto por 12 arcos argumentales</p>
+                        </div>
+                    </div>
+
+                    <div class="divsubtitle-article">
+                        <p>Acceda a los datos de los episodios, incluidas las fechas de emisión, sinopsis, información de la temporada e imágenes de los episodios.</p>
+                    </div>
+                </article>
+
+                <!-- Articulo 3 -->
+                <article class="article-grid">
+                    <div class="divtitle-article">
+                        <div class="icono">
+                            <i class="fa-solid fa-file"></i>
+                        </div>
+                        <div class="subtitle-article">
+                            <h3>Episodios(anime)</h3>
+                        </div>
+                        <div class="p-article">
+                            <p>El anime de Demon Slayer tiene un total de 4 temporadas y dos peliculas.</p>
+                        </div>
+                    </div>
+
+                    <div class="divsubtitle-article">
+                        <p>Explore lugares emblemáticos de Springfield, incluidas casas, negocios y lugares emblemáticos.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- DOCUMENTACION SECTION -->
+        <section class="documentation">
+            <div class="documentation-content">
+                <div class="documenation-title">
+                    <h2>Documentacion de la API</h2>
+                    <p>Guía de referencia completa para la API de Kimetsu No Yaiba. Accede a personajes, arcos argumentales, episodios del anime e imágenes con puntos de conexión REST sencillos.</p>
+                </div>
+                <div class="contenido">
+                    <div class="tabla-list">
+                        <button>Empezando</button>
+                        <button>Personajes</button>
+                        <button>Episodios</button>
+                        <button>Empezando</button>
+                        <button>Arcos narrativos</button>
+                        <button>Imagenes</button>
+                    </div>
+
+                    <div class="guie">
+                        <div class="guie-header">
+                            <div class="guie-title">
+                                <h3>Guía de inicio</h3>
+                            </div>
+                            <div class="guie-p">
+                                <p>Ponte en marcha con la API de Demon Slayer en minutos. No requiere autenticación.</p>
+                            </div>
+                        </div>
+
+                        <div class="guie-content">
+                            <div class="guie-url">
+                                <h4>URL base</h4>
+                                <div class="guie-terminal">
+                                    <div class="guie-textbox">
+                                        <pre class="textbox">
+                                            <code class="text-code">http://127.0.0.1:5000/api/cazadores/</code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <p>Todas las solicitudes de API deben dirigirse a esta URL base. La API es completamente abierta y no requiere autenticación.</p>
+                            </div>
+                            <div class="guie-url">
+                                <h4>Tu primera peticion</h4>
+                                <span>Comencemos obteniendo un solo personaje en este caso sera Tanjiro Kamado.</span>
+                                <span>Prueba escribiendo</span>
+                                <div class="guie-terminal">
+                                    <div class="guie-textbox">
+                                        <pre class="textbox">
+                                            <code class="text-code">http://127.0.0.1:5000/api/cazadores/1</code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <p>Todas las solicitudes de API deben dirigirse a esta URL base. La API es completamente abierta y no requiere autenticación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
