@@ -2,90 +2,89 @@
 
 ![Demon Slayer Logo](media/Demon-Slayer-Logo.png)
 
-Una API RESTful ligera y sencilla construida con **Django REST framework** (Python) para acceder a datos de cazadores, estilos de respiración y roles del universo de *Kimetsu No Yaiba*.
+A lightweight and simple RESTful API built with **Django REST framework** (Python) to access data about slayer characters, breathing styles, and roles from the *Kimetsu No Yaiba* universe.
 
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
 ---
-| Componente | Tecnología | Propósito |
+| Component | Technology | Purpose |
 | :--- | :---| :--- |
-| **Backend** | [![Backend](https://skillicons.dev/icons?i=py,django)](https://github.com/DaniDevGS/Demon-Slayer-API)| Servidor RESTful y lógica de datos. |
-| **Base de Datos** | [![Data Base](https://skillicons.dev/icons?i=sqlite)](https://github.com/DaniDevGS/Demon-Slayer-API) | Almacenamiento de los datos de la API. |
-| **Frontend** | [![Frontend](https://skillicons.dev/icons?i=html,css)](https://github.com/DaniDevGS/Demon-Slayer-API) | Página de bienvenida y documentación de la API. |
+| **Backend** | [![Backend](https://skillicons.dev/icons?i=py,django)](https://github.com/DaniDevGS/Demon-Slayer-API)| RESTful server and data logic. |
+| **Database** | [![Database](https://skillicons.dev/icons?i=sqlite)](https://github.com/DaniDevGS/Demon-Slayer-API) | API data storage. |
+| **Frontend** | [![Frontend](https://skillicons.dev/icons?i=html,css)](https://github.com/DaniDevGS/Demon-Slayer-API) | Welcome page and API documentation. |
 ---
 
 
 
-## 🚀 Instalación y Ejecución
+## 🚀 Setup and Installation
 
-Sigue estos pasos para levantar la API en tu entorno local.
+Follow these steps to run the API in your local environment.
 
-### Prerequisitos
+### Prerequisites
 
-* **Python 3+**
-* **`pip`** (Python package installer)
+- **Python 3+**
+- **`pip`** (Python package installer)
 
-### 1. Clonar el Repositorio
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/DaniDevGS/Demon-Slayer-API-REST
 cd Demon-Slayer-API-REST
 ```
 
-### 2. Crear Entorno Virtual e Instalar Dependencias
+### 2. Create Virtual Environment and Install Dependencies
 
-Se recomienda usar un entorno virtual para aislar las dependencias del proyecto.
+Using a virtual environment is recommended to isolate project dependencies.
 
 ```bash
-
-# Crear entorno virtual 
+# Create virtual environment 
 python -m venv venv
 
-# Activar el entorno virtual
-# En Windows:
+# Activate virtual environment
+# On Windows:
 .\venv\Scripts\activate
-# En macOS/Linux:
+# On macOS/Linux:
 source venv/bin/activate
 
-# Instalar dependencias 
+# Install dependencies 
 pip install -r requirements.txt
 ```
 
-### 3. Configuracion de variables de entorno
-En el archivo .env_example aparece tal que asi
+### 3. Environment Variables Configuration
+In the `.env_example` file, it looks like this:
 
 ```bash
-SECRET_KEY=tu_secret_key
-DEBUG = tu_debug
+SECRET_KEY=your_secret_key
+DEBUG=your_debug
 ```
 
-### 4. Ejecutar la Aplicación
+### 4. Run the Application
 
-Ejecuta el servidor de Django:
+Run the Django server:
 ```bash
 python manage.py runserver 0.0.0.0:8000
 ```
 
-## 📚 Endpoints de la API
+## 📚 API Endpoints
 
-La API expone los siguientes puntos de conexión REST (actualmente solo soporta GET):
+The API exposes the following REST endpoints (currently supports GET requests only):
 
-### Cazadores
+### Slayers
 ---
-| Metodo | Endpoint | Descripción |
+| Method | Endpoint | Description |
 | :--- | :---| :--- |
-| **GET** | **/api/cazadores/** | Obtiene la lista completa de todos los cazadores de demonios.	 |
-| **GET** | **/api/cazadores/id/** | Obtiene un cazador específico por su id. |
+| **GET** | **/api/cazadores/** | Retrieves the full list of all demon slayers. |
+| **GET** | **/api/cazadores/id/** | Retrieves a specific slayer by ID. |
 ---
 
-#### Ejemplo: Obtener un Personaje
-Para obtener la información de Tanjiro Kamado (ID 1), haz una solicitud a:
+#### Example: Retrieve a Character
+To retrieve information for Tanjiro Kamado (ID 1), send a request to:
 ```bash
 GET http://localhost:8000/api/cazadores/1
 ```
 
-##### Respuesta (JSON):
+##### Response (JSON):
 ```json
 {
     "id": 1,
@@ -100,26 +99,26 @@ GET http://localhost:8000/api/cazadores/1
 }
 ```
 
-### Respiraciones
+### Breathing Styles
 ---
-| Metodo | Endpoint | Descripción |
+| Method | Endpoint | Description |
 | :--- | :---| :--- |
-| **GET** | **/api/respiraciones/** | Obtiene la lista completa de todas las respiraciones de Demon Slayer	 |
-| **GET** | **/api/respiraciones/id/** | Obtiene una respiracion específica por su id. |
+| **GET** | **/api/respiraciones/** | Retrieves the full list of all Demon Slayer breathing styles. |
+| **GET** | **/api/respiraciones/id/** | Retrieves a specific breathing style by ID. |
 ---
 
-### Posturas
+### Forms
 ---
-| Metodo | Endpoint | Descripción |
+| Method | Endpoint | Description |
 | :--- | :---| :--- |
-| **GET** | **/api/posturas/** | Obtiene la lista completa de todas las posturas de las respiraciones de Demon Slayer	 |
-| **GET** | **/api/posturas/id/** | Obtiene una posturas específica por su id. |
+| **GET** | **/api/posturas/** | Retrieves the full list of all Demon Slayer breathing forms. |
+| **GET** | **/api/posturas/id/** | Retrieves a specific breathing form by ID. |
 ---
 
 ### Roles
 ---
-| Metodo | Endpoint | Descripción |
+| Method | Endpoint | Description |
 | :--- | :---| :--- |
-| **GET** | **/api/roles/** | Obtiene la lista completa de todos los roles narrativos de Demon Slayer.	 |
-| **GET** | **/api/roles/id/** | Obtiene un rol narrativo específico por su id. |
+| **GET** | **/api/roles/** | Retrieves the full list of all narrative roles in Demon Slayer. |
+| **GET** | **/api/roles/id/** | Retrieves a specific narrative role by ID. |
 ---
